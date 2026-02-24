@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ALLOWED_ORIGINS = ["http://localhost:5173/"]
 
 # Application definition
 
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -76,23 +78,23 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ваше_имя_базы_данных',      # Имя вашей БД
-        'USER': 'ваше_имя_пользователя',     # Пользователь БД
-        'PASSWORD': 'ваш_пароль',            # Пароль пользователя
-        'HOST': 'localhost',                 # 'localhost' или IP адрес
-        'PORT': '5432',                      # Порт PostgreSQL (по умолчанию 5432)
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'lib',      # Имя вашей БД
+#         'USER': 'postgres',     # Пользователь БД
+#         'PASSWORD': '7yRPtDUtwQ_siwQxJAGC',            # Пароль пользователя
+#         'HOST': '188.130.208.65',                 # 'localhost' или IP адрес
+#         'PORT': '5432',                      # Порт PostgreSQL (по умолчанию 5432)
+#     }
+# }
 # пароль 7yRPtDUtwQ_siwQxJAGC или 4RerCK9bCvWQmjp
 # сервак 188.130.208.65:5432
 # USER: postgres

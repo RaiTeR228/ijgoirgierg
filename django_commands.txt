@@ -42,3 +42,17 @@ python manage.py migrate
 Спец поля 
     UUIDField - уник. индефр. - id = models.UUIDField(default=uuid.uuid64, editable=Fasle)
 
+
+Node js
+npm create vite@latest
+y
+project name: client
+react
+JavaScript
+No
+No
+
+cd client
+npm install
+npm install axios
+nmp run dev
